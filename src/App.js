@@ -109,6 +109,31 @@ import p94 from './imgPropiedades/p94.jpg';
 import p95 from './imgPropiedades/p95.jpg'; 
 import p96 from './imgPropiedades/p96.jpg';
 
+import p101 from './imgPropiedades/p101.jpg'; 
+import p102 from './imgPropiedades/p102.jpg'; 
+import p103 from './imgPropiedades/p103.jpg'; 
+import p104 from './imgPropiedades/p104.jpg';
+import p105 from './imgPropiedades/p105.jpg'; 
+import p106 from './imgPropiedades/p106.jpg';
+import p107 from './imgPropiedades/p107.jpg'; 
+import p108 from './imgPropiedades/p108.jpg';
+
+
+import p111 from './imgPropiedades/p111.jpg'; 
+import p112 from './imgPropiedades/p112.jpg'; 
+import p113 from './imgPropiedades/p113.jpg'; 
+import p114 from './imgPropiedades/p114.jpg';
+import p115 from './imgPropiedades/p115.jpg'; 
+import p116 from './imgPropiedades/p116.jpg'; 
+
+import p121 from './imgPropiedades/p121.jpg'; 
+import p122 from './imgPropiedades/p122.jpg'; 
+import p123 from './imgPropiedades/p123.jpg'; 
+import p124 from './imgPropiedades/p124.jpg';
+import p125 from './imgPropiedades/p125.jpg'; 
+import p126 from './imgPropiedades/p126.jpg'; 
+
+
 import { TabView, TabPanel } from 'primereact/tabview';
 import { Image } from 'primereact/image';
 import { Accordion, AccordionTab } from 'primereact/accordion';
@@ -132,7 +157,7 @@ export default function App() {
       <TabView>
       
       <TabPanel header="Playas referenciadas" leftIcon="pi pi-calendar mr-2">
-      <Accordion activeIndex={0}>
+      <Accordion>
       <AccordionTab header="Playa Shalpa">
        <Table aria-label="simple table">
       
@@ -799,9 +824,139 @@ export default function App() {
                </p></TableCell>
           </TableRow>
        
+            <TableRow>
+             <TableCell > 10</TableCell>
+            <TableCell align="right"><p class="centrado"> Playa la ventana</p></TableCell>
+            <TableCell align="right"><p class="derecho">1,500 m²</p> </TableCell>
+            <TableCell align="right"><p class="derecho">
+                &#42; 15M de frente<br/><br/>
+                &#42; 100M de largo<br/><br/>
+               </p> </TableCell>
+            <TableCell align="right"><p class="centrado"> $350,000</p></TableCell>
+            <TableCell align="right"><p class="centrado">Precio negociable </p></TableCell>
+            <TableCell align="right"><p class="centrado">Rodrigo Hernandez 7012-3456</p></TableCell>
+            <TableCell align="right"><p class="centrado">
+            Un terreno frente al mar Y  con vista al mar
+           </p></TableCell>
+            <TableCell align="right"> <p class="centrado">
+                                    <Table aria-label="simple table">
+                                      <TableBody>
+                                        
+                                        <TableRow>
+                                        <TableCell align="right"> <Image preview  src={p101} alt="p91" width="75" height="75"/></TableCell>
+                                        <TableCell align="right"> <Image preview  src={p102} alt="p92" width="75" height="75"/></TableCell>
+                                        </TableRow>
+
+                                        <TableRow>
+                                        <TableCell align="right"> <Image preview  src={p103} alt="p93" width="75" height="75"/></TableCell>
+                                        <TableCell align="right"> <Image preview  src={p104} alt="p94" width="75" height="75"/></TableCell>
+                                         </TableRow>
+
+                                        <TableRow>
+                                        <TableCell align="right"> <Image preview  src={p105} alt="p95" width="75" height="75"/></TableCell>
+                                        <TableCell align="right"> <Image preview  src={p106} alt="p96" width="75" height="75"/></TableCell>
+                                        </TableRow>
+
+
+                                       
+
+                                     </TableBody>
+                                      </Table>
+              
+               </p></TableCell>
+          </TableRow>
+           
+           
+            <TableRow>
+             <TableCell > 11</TableCell>
+            <TableCell align="right"><p class="centrado"> Playa Garita Palmera</p></TableCell>
+            <TableCell align="right"><p class="derecho">2,320 m²</p> </TableCell>
+            <TableCell align="right"><p class="derecho">
+                --
+               </p> </TableCell>
+            <TableCell align="right"><p class="centrado"> $275,000</p></TableCell>
+            <TableCell align="right"><p class="centrado">Precio negociable </p></TableCell>
+            <TableCell align="right"><p class="centrado">Jose Alberto Trujillo 7012-6979</p></TableCell>
+            <TableCell align="right"><p class="centrado">
+             Un terreno frente al mar, CERCA DE FRONTERA CON GUATEMALA
+A 35 MINUTOS DEL PUERTO DE ACAJUTLA
+           </p></TableCell>
+            <TableCell align="right"> <p class="centrado">
+                                    <Table aria-label="simple table">
+                                      <TableBody>
+                                        
+                                        <TableRow>
+                                        <TableCell align="right"> <Image preview  src={p111} alt="p111" width="75" height="75"/></TableCell>
+                                        <TableCell align="right"> <Image preview  src={p112} alt="p112" width="75" height="75"/></TableCell>
+                                        </TableRow>
+
+                                        <TableRow>
+                                        <TableCell align="right"> <Image preview  src={p113} alt="p113" width="75" height="75"/></TableCell>
+                                        <TableCell align="right"> <Image preview  src={p114} alt="p114" width="75" height="75"/></TableCell>
+                                         </TableRow>
+
+                                        <TableRow>
+                                        <TableCell align="right"> <Image preview  src={p115} alt="p115" width="75" height="75"/></TableCell>
+                                        <TableCell align="right"> <Image preview  src={p116} alt="p116" width="75" height="75"/></TableCell>
+                                        </TableRow>
+
+
+                                       
+
+                                     </TableBody>
+                                      </Table>
+              
+               </p></TableCell>
+          </TableRow>
+
+
+           <TableRow>
+             <TableCell > 12</TableCell>
+            <TableCell align="right"><p class="centrado"> Playa Torola</p></TableCell>
+            <TableCell align="right"><p class="derecho">3,085 m²</p> </TableCell>
+            <TableCell align="right"><p class="derecho">
+                 &#42; 32M de frente<br/><br/>
+                 &#42; 105M de largo<br/><br/>
+               </p> </TableCell>
+            <TableCell align="right"><p class="centrado"> $460,000</p></TableCell>
+            <TableCell align="right"><p class="centrado">-- </p></TableCell>
+            <TableCell align="right"><p class="centrado">ARIEL H BENITEZ 7847-4085</p></TableCell>
+            <TableCell align="right"><p class="centrado">
+             Terreno enfrente del mar, en una pequeña playa en el departamento de la Union. 
+           </p></TableCell>
+            <TableCell align="right"> <p class="centrado">
+                                    <Table aria-label="simple table">
+                                      <TableBody>
+                                        
+                                        <TableRow>
+                                        <TableCell align="right"> <Image preview  src={p121} alt="p121" width="75" height="75"/></TableCell>
+                                        <TableCell align="right"> <Image preview  src={p122} alt="p122" width="75" height="75"/></TableCell>
+                                        </TableRow>
+
+                                        <TableRow>
+                                        <TableCell align="right"> <Image preview  src={p123} alt="p123" width="75" height="75"/></TableCell>
+                                        <TableCell align="right"> <Image preview  src={p124} alt="p114" width="75" height="75"/></TableCell>
+                                         </TableRow>
+
+                                        <TableRow>
+                                        <TableCell align="right"> <Image preview  src={p125} alt="p125" width="75" height="75"/></TableCell>
+                                        <TableCell align="right"> <Image preview  src={p126} alt="p126" width="75" height="75"/></TableCell>
+                                        </TableRow>
+
+
+                                       
+
+                                     </TableBody>
+                                      </Table>
+              
+               </p></TableCell>
+          </TableRow>
+       
        
       </TableBody>
     </Table>
+
+
     </TabPanel>
     
 </TabView>
