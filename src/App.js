@@ -1,4 +1,6 @@
-import { useState } from 'react'
+
+import React, { useState, useEffect, useRef } from 'react';
+
 import reactLogo from './assets/react.svg'
 import './App.css'
 import "primereact/resources/themes/lara-light-cyan/theme.css";
@@ -46,6 +48,7 @@ import puntamango02 from './img/puntamango02.jpg';
 import puntamango03 from './img/puntamango03.jpg'; 
 import puntamango04 from './img/puntamango04.jpeg';
 
+import mapEspino from './img/mapEspino.jpg'; 
 import espino01 from './img/espino01.jpg'; 
 import espino02 from './img/espino02.jpg'; 
 import espino03 from './img/espino03.jpg'; 
@@ -133,25 +136,57 @@ import p124 from './imgPropiedades/p124.jpg';
 import p125 from './imgPropiedades/p125.jpg'; 
 import p126 from './imgPropiedades/p126.jpg'; 
 
+import p131 from './imgPropiedades/p131.jpg'; 
+import p132 from './imgPropiedades/p132.jpg'; 
+import p133 from './imgPropiedades/p133.jpg'; 
+import p134 from './imgPropiedades/p134.jpg';
+
+import p141 from './imgPropiedades/p141.jpg'; 
+import p142 from './imgPropiedades/p142.jpg'; 
+import p143 from './imgPropiedades/p143.jpg'; 
+import p144 from './imgPropiedades/p144.jpg';
 
 import { TabView, TabPanel } from 'primereact/tabview';
 import { Image } from 'primereact/image';
 import { Accordion, AccordionTab } from 'primereact/accordion';
 
 
+
+import { Galleria } from 'primereact/galleria';
+import { PhotoService } from './PhotoService';
+
 export default function App() {
 
 
+ const [images, setImages] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(0);    
+    const galleria = useRef(null);
+
+    useEffect(() => {
+        PhotoService.getImages().then(data => setImages(data));
+    }, []);
+
+    const itemTemplate = (item) => {
+        console.log("hola    :"+item.itemImageSrc);
+        return <Image src={item.itemImageSrc} alt={item.alt} style={{ width: '100%', display: 'block' }} />;
+    }
+
+    const thumbnailTemplate = (item) => {
+        return <Image src={item.thumbnailImageSrc} alt={item.alt} style={{ display: 'block' }} />;
+    }
+
+
+    
   return (
     
-    
-    
-    <div>
 
-    
+    <div>
+     
+        
     <center><h1>Visor de terrenos playeros</h1></center>
 
-          
+        <center>   <Image src={mapEspino} alt="mapEspino"  width="400" height="200" preview /></center>
+           
     <div id="divmain">   
     
       <TabView>
@@ -174,7 +209,9 @@ export default function App() {
         <TableBody>
            <TableRow>
               <TableCell align="right"><p class="centrado"> Peque&ntilde;a playa con vegetaci&oacute;n  con paredes altas de rocas  a los lados y arena  volcanica en medio</p></TableCell>
-              <TableCell align="right"><p class="derecha">Jilapa, La Libertad</p></TableCell>
+              <TableCell align="right"><p class="derecha">
+               <iframe width="400" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=%20+(Playa%20el%20icacal)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                Jilapa, La Libertad</p></TableCell>
               <TableCell align="right"><p class="derecho">&#x2713; Playa privada<br/><br/> &#x2713;Porton de entrada<br/><br/> &#x2713;Relativamente menos caliente que otras playas <br/><br/> &#x2713; Cerca de la playas surf city 1 tunco, zonte <br/><br/> &#x2713;25 km centro comerciales y gasolineras <br/><br/> &#x2713;58 km  de San Salvador</p></TableCell>
               <TableCell align="right"><p class="derecho" >  &#42;Terrenos inclinados<br/><br/> &#42;Calles de tierra dentro del condominio</p></TableCell>
               <TableCell align="right">
@@ -206,7 +243,10 @@ export default function App() {
       <TableBody>
          <TableRow>
             <TableCell align="right"><p class="centrado"> Peque&ntilde;a playa con vegetaci&oacute;n  con paredes altas de rocas  a los lados y arena  volcanica en medio</p></TableCell>
-            <TableCell align="right"><p class="derecha">Teotepeque, La Libertad</p></TableCell>
+            <TableCell align="right"><p class="derecha">
+              
+             <iframe width="400" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=%20+(Playa%20Bahia%20Dorada)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+              Teotepeque, La Libertad</p></TableCell>
             <TableCell align="right"><p class="derecho">
               &#x2713; Playa privada<br/><br/> 
               &#x2713;Porton de entrada con carnet<br/><br/> 
@@ -248,7 +288,12 @@ export default function App() {
       <TableBody>
          <TableRow>
             <TableCell align="right"><p class="centrado"> Mediana playa del oriente de El salvador, con  arena beisge clara, la hermana gemela de playa costa del sol, con la diferencia que es una playa con muy poca concurrencia y con vegatacion virgen de manglares</p></TableCell>
-            <TableCell align="right"><p class="derecha">Intipuc&aacute;, La Uni&oacute;n</p></TableCell>
+            <TableCell align="right"><p class="derecha">
+
+             
+              <iframe width="300" height="250" frameborder="0"  marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=%20+(Playa%20el%20icacal)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+              
+              Intipuc&aacute;, La Uni&oacute;n</p></TableCell>
             <TableCell align="right"><p class="derecho">
               &#x2713; Playa con terrenos planos<br/><br/> 
               &#x2713; Nueva calle de asfalto de  acceso a la playa <br/><br/> 
@@ -291,7 +336,9 @@ export default function App() {
       <TableBody>
          <TableRow>
             <TableCell align="right"><p class="centrado">Pequeña playa de arena gris entre risco de piedra volcanica,la playa pertence al circuito de surf City2</p></TableCell>
-            <TableCell align="right"><p class="derecha">Jucuaran, Usuluatan</p></TableCell>
+            <TableCell align="right"><p class="derecha">
+            <iframe width="400" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=%20+(Playa%20la%20ventana)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+              Jucuaran, Usuluatan</p></TableCell>
             <TableCell align="right"><p class="derecho">
               &#x2713; Playa pequeña encerra con pequeños relieves<br/><br/> 
               &#x2713; Playa pertenece surfCity2, es semi privada <br/><br/> 
@@ -331,7 +378,9 @@ export default function App() {
       <TableBody>
          <TableRow>
             <TableCell align="right"><p class="centrado">Mediana playa de arena arena de clara, en el golfo de fonseca la cual es la unica que tiene agua manzas del pacifico, desde sur de mexico hasta costa Rica</p></TableCell>
-            <TableCell align="right"><p class="derecha">Conchagua, La Unión</p></TableCell>
+            <TableCell align="right"><p class="derecha">
+              <iframe width="400" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=%20+(Playa%20el%20tamarindo)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+              Conchagua, La Unión</p></TableCell>
             <TableCell align="right"><p class="derecho">
               &#x2713; Por ser  agua mansas, tiene comportamiento de lago, por lo que  se puede utilizar facilmente motos acuaticas, balsas deportivas y facil pesca maritima <br/><br/> 
               &#x2713; Vista del golfo de fonseca con sus islas <br/><br/> 
@@ -371,7 +420,9 @@ export default function App() {
       <TableBody>
          <TableRow>
             <TableCell align="right"><p class="centrado"> Playa en el  coraz&oacute;n del surf  Surf City 2 en el oriente del pa&iacute;s, playa de arena pero tambien tiene un poco de piedras en algunas &aacute;reas, zona de alta plusvalia para nuevo hoteles  especializados para surf</p></TableCell>
-            <TableCell align="right"><p class="derecha">Jucuarán, Usulutan</p></TableCell>
+            <TableCell align="right"><p class="derecha">
+              <iframe width="400" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=%20+(punta%20mango)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+              Jucuarán, Usulutan</p></TableCell>
             <TableCell align="right"><p class="derecho">
               &#x2713;  Con muy buena olas para surf <br/><br/> 
               &#x2713;  Playa de surfCity 2<br/><br/> 
@@ -411,7 +462,11 @@ export default function App() {
       <TableBody>
          <TableRow>
             <TableCell align="right"><p class="centrado"> Playa casi en medio de la rivera del pais, extensa playa de arena volcanica</p></TableCell>
-            <TableCell align="right"><p class="derecha">Jucuarán, Usulutan</p></TableCell>
+            <TableCell align="right"><p class="derecha">
+             
+              <iframe width="400" height="250" frameborder="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=playa%20el%20espino,%20Usulut%C3%A1n%20+(Playa%20el%20Espino)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+             Jucuarán, Usulutan</p>
+            </TableCell>
             <TableCell align="right"><p class="derecho">
               &#x2713;  Muy plana y sin nada de baches <br/><br/> 
               &#x2713;  Extensa playa<br/><br/> 
@@ -444,19 +499,24 @@ export default function App() {
       <TableHead>
         <TableRow>
           <TableCell ><b>ID</b></TableCell>
-          <TableCell align="right"><b>Playa</b></TableCell>
-          <TableCell align="right"><b>&Aacute;rea</b></TableCell>
-          <TableCell align="right"><b>Dimenciones</b></TableCell>
-          <TableCell align="right"><b>Precio</b></TableCell>
-          <TableCell align="right"><b>Negociable</b></TableCell>
-          <TableCell align="right"><b>Contacto</b></TableCell>
-          <TableCell align="right"><b>Observaci&oacute;n</b></TableCell>
-          <TableCell align="right"><b>Fotos</b></TableCell>
+          <TableCell ><b>Ubicaci&oacute;n</b></TableCell>
+          <TableCell align="right"> <b>Playa</b></TableCell>
+          <TableCell align="right"> <b>&Aacute;rea</b></TableCell>
+          <TableCell align="right"> <b>Dimenciones</b></TableCell>
+          <TableCell align="right"> <b>Precio</b></TableCell>
+          <TableCell align="right"> <b>Estado</b></TableCell>
+          <TableCell align="right"> <b>Negociable</b></TableCell>
+          <TableCell align="right"> <b>Contacto</b></TableCell>
+          <TableCell align="right"> <b>Observaci&oacute;n</b></TableCell>
+          <TableCell align="right"> <b>Fotos</b></TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
          <TableRow>
             <TableCell> 0</TableCell>
+            <TableCell> 
+
+               </TableCell>
             <TableCell align="right"><p class="centrado"> Playa Bahia Dorada</p></TableCell>
             <TableCell align="right"><p class="derecho">1514 m2</p> </TableCell>
             <TableCell align="right"><p class="derecho" >
@@ -465,6 +525,7 @@ export default function App() {
                &#42; 50M costado izquierdo y derecho<br/><br/>
                </p> </TableCell>
             <TableCell align="right"><p class="centrado"> $130,000 </p></TableCell>
+            <TableCell align="right"><p class="centrado"> En Venta </p></TableCell>
             <TableCell align="right"><p class="centrado">Un poco Negociable</p></TableCell>
             <TableCell align="right"><p class="centrado">El contacto es uno de los dueños, ya que la propiedad es de dos hermanos, me confirmo si se concretase una venta estaria lo dos precentes para la firma </p></TableCell>
             <TableCell align="right"><p class="centrado"> Terreno es inclinado, queda dentro de condominio privado pero no se logra ver la playa almenos que se contruya una casa dos niveles </p></TableCell>
@@ -490,6 +551,11 @@ export default function App() {
 
           <TableRow>
             <TableCell >1</TableCell>
+            <TableCell >
+              <iframe width="150" height="150" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=13.502867506741698%2C%20-89.48764899014827&zoom=10&maptype=roadmap"></iframe>
+           
+
+            </TableCell>
             <TableCell align="right"><p class="centrado"> Playa shalpa</p></TableCell>
             <TableCell align="right"><p class="derecho">1965 m2</p> </TableCell>
             <TableCell align="right"><p class="derecho" >
@@ -498,6 +564,7 @@ export default function App() {
                &#42; 42M costado izquierdo y 43 costado derecho<br/><br/>
                </p> </TableCell>
             <TableCell align="right"><p class="centrado"> $605,870 </p></TableCell>
+            <TableCell align="right"><p class="centrado"> En Venta </p></TableCell>
             <TableCell align="right"><p class="centrado">Se acepta Ofertas</p></TableCell>
             <TableCell align="right"><p class="centrado">Venta directa con propietario,NO intermediarios.Nuria Cabrera Cel: 7787-0143 </p></TableCell>
             <TableCell align="right"><p class="centrado">Terreno con en el risco con vista al mar, legalmente son dos lotes casi del mismo tamaño pero solo se vende los dos juntos</p></TableCell>
@@ -523,12 +590,14 @@ export default function App() {
 
           <TableRow>
             <TableCell > 2</TableCell>
+            <TableCell ></TableCell>
             <TableCell align="right"><p class="centrado"> Bahia Dorada</p></TableCell>
             <TableCell align="right"><p class="derecho">1589 m2</p> </TableCell>
             <TableCell align="right"><p class="derecho" >
                &#42; 34M de frente<br/><br/>
                </p> </TableCell>
             <TableCell align="right"><p class="centrado"> $125.000 </p></TableCell>
+            <TableCell align="right"><p class="centrado"> Vendido </p></TableCell>
             <TableCell align="right"><p class="centrado">--</p></TableCell>
             <TableCell align="right"><p class="centrado">El contacto es  vendedor, me estaba pendiente de avisar si esta disponible me comenta que habia un interesado </p></TableCell>
             <TableCell align="right"><p class="centrado"> Terreno con inclinacion hacia arriba, terreno con vista al mar desde risco segun foto</p></TableCell>
@@ -551,12 +620,14 @@ export default function App() {
          
           <TableRow>
             <TableCell > 3</TableCell>
+            <TableCell ></TableCell>
             <TableCell align="right"><p class="centrado"> Bahia Dorada</p></TableCell>
             <TableCell align="right"><p class="derecho">1,729 m2</p> </TableCell>
             <TableCell align="right"><p class="derecho" >
              --
                </p> </TableCell>
             <TableCell align="right"><p class="centrado">  $165,000 </p></TableCell>
+             <TableCell align="right"><p class="centrado"> En Venta </p></TableCell>
             <TableCell align="right"><p class="centrado">--</p></TableCell>
             <TableCell align="right"><p class="centrado">El contacto es una agencia  vendedora </p></TableCell>
             <TableCell align="right"><p class="centrado"> Terreno semi alomando, no tiene vista directa al mar</p></TableCell>
@@ -584,12 +655,14 @@ export default function App() {
 
           <TableRow>
             <TableCell> 4</TableCell>
+            <TableCell ></TableCell>
             <TableCell align="right"><p class="centrado"> Bahia Dorada</p></TableCell>
             <TableCell align="right"><p class="derecho">1,355 m2</p> </TableCell>
             <TableCell align="right"><p class="derecho" >
              --
                </p> </TableCell>
             <TableCell align="right"><p class="centrado">  $200,000 </p></TableCell>
+             <TableCell align="right"><p class="centrado"> En Venta </p></TableCell>
             <TableCell align="right"><p class="centrado">--</p></TableCell>
             <TableCell align="right"><p class="centrado">--</p></TableCell>
             <TableCell align="right"><p class="centrado"> Terreno poco inclinado con vista al mar</p></TableCell>
@@ -616,12 +689,16 @@ export default function App() {
 
           <TableRow>
             <TableCell> 5</TableCell>
+            <TableCell >
+              <iframe width="150" height="150" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=13.52888347983163%2C%20-89.80287488949182&zoom=10&maptype=roadmap"></iframe>
+           </TableCell>
             <TableCell align="right"><p class="centrado"> Playa las veraneras</p></TableCell>
             <TableCell align="right"><p class="derecho">4,355 m2</p> </TableCell>
             <TableCell align="right"><p class="derecho">
              --
                </p> </TableCell>
             <TableCell align="right"><p class="centrado">  $185,000  </p></TableCell>
+             <TableCell align="right"><p class="centrado"> En Venta </p></TableCell>
             <TableCell align="right"><p class="centrado">Negocible</p></TableCell>
             <TableCell align="right"><p class="centrado">Contacto es un Vendedor inmobiliario</p></TableCell>
             <TableCell align="right"><p class="centrado"> Terreno casi plano no tiene vista directa al mar, esta dentro de club la veraneras  con pisina enfrete de la playa y tiene cancha de golf y  la calle esta asfaltadas. A la par del resort Decamerun.  </p></TableCell>
@@ -653,12 +730,17 @@ export default function App() {
 
           <TableRow>
             <TableCell > 6</TableCell>
-            <TableCell align="right"><p class="centrado"> Playa la Ventana</p></TableCell>
+            <TableCell >
+                 <iframe width="150" height="150" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=13.169177186142953%2C%20-88.16253784096402&zoom=10&maptype=roadmap"></iframe>
+
+            </TableCell>
+            <TableCell align="right"><p class="centrado">Playa la Ventana</p></TableCell>
             <TableCell align="right"><p class="derecho">1,020 m² </p> </TableCell>
             <TableCell align="right"><p class="derecho">
              --
                </p> </TableCell>
             <TableCell align="right"><p class="centrado">  $350,000  </p></TableCell>
+             <TableCell align="right"><p class="centrado"> En Venta </p></TableCell>
             <TableCell align="right"><p class="centrado">Negocible para compradores calificado</p></TableCell>
             <TableCell align="right"><p class="centrado">Contacto es un Vendedor inmobiliario</p></TableCell>
             <TableCell align="right"><p class="centrado"> Terreno frente al mar y una elevación aprox. 5 metros sobre el nivel del mar.Dentro la playa de la ventana, por lo que entendi al vendedor   hay  una sub-playita privada para el condominio. Agua instalada
@@ -699,12 +781,16 @@ export default function App() {
 
         <TableRow>
             <TableCell><p> 7</p></TableCell>
+            <TableCell >
+             <iframe width="150" height="150" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=13.170409313299098%2C%20-88.16137921168222&zoom=10&maptype=roadmap"></iframe>
+            </TableCell>
             <TableCell align="right"><p class="centrado"> Playa la Ventana</p></TableCell>
             <TableCell align="right"><p class="derecho">850 m² hasta 1,452 m² </p> </TableCell>
             <TableCell align="right"><p class="derecho">
              En la fotos se detalle precios y tamaño de lotes
                </p> </TableCell>
             <TableCell align="right"><p class="centrado"> $182,000 a $301,000 </p></TableCell>
+             <TableCell align="right"><p class="centrado"> En Venta </p></TableCell>
             <TableCell align="right"><p class="centrado">--</p></TableCell>
             <TableCell align="right"><p class="centrado">Contacto es un Vendedor inmobiliario</p></TableCell>
             <TableCell align="right"><p class="centrado">
@@ -742,6 +828,7 @@ export default function App() {
        
        <TableRow>
             <TableCell > 8</TableCell>
+            <TableCell ><iframe width="150" height="150" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=13.17406587808265%2C%20-88.34402995996656&zoom=10&maptype=roadmap"></iframe></TableCell>
             <TableCell align="right"><p class="centrado"> Playa el Espino</p></TableCell>
             <TableCell align="right"><p class="derecho">7,650.18 m²</p> </TableCell>
             <TableCell align="right"><p class="derecho">
@@ -749,6 +836,7 @@ export default function App() {
                 &#42; 163M de largo<br/><br/>
                </p> </TableCell>
             <TableCell align="right"><p class="centrado"> $450,000</p></TableCell>
+            <TableCell align="right"><p class="centrado"> En Venta </p></TableCell>
             <TableCell align="right"><p class="centrado">Negociable pero vendora me comento que se puede enviar ofertas </p></TableCell>
             <TableCell align="right"><p class="centrado">Contanto con vendedora (Ivonne Castro 7633 0448)</p></TableCell>
             <TableCell align="right"><p class="centrado">
@@ -784,6 +872,7 @@ export default function App() {
 
         <TableRow>
              <TableCell > 9</TableCell>
+             <TableCell ></TableCell>
             <TableCell align="right"><p class="centrado"> Playa el Tamarindo</p></TableCell>
             <TableCell align="right"><p class="derecho">2,500 m²</p> </TableCell>
             <TableCell align="right"><p class="derecho">
@@ -791,6 +880,7 @@ export default function App() {
                 &#42; 100M de largo<br/><br/>
                </p> </TableCell>
             <TableCell align="right"><p class="centrado"> $500,000</p></TableCell>
+             <TableCell align="right"><p class="centrado"> En Venta </p></TableCell>
             <TableCell align="right"><p class="centrado">Precio negociable </p></TableCell>
             <TableCell align="right"><p class="centrado">--</p></TableCell>
             <TableCell align="right"><p class="centrado">
@@ -826,6 +916,9 @@ export default function App() {
        
             <TableRow>
              <TableCell > 10</TableCell>
+             <TableCell >
+              <iframe width="150" height="150" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=13.168962247089304%2C%20-88.16353544192226&zoom=10&maptype=roadmap"></iframe>
+             </TableCell>
             <TableCell align="right"><p class="centrado"> Playa la ventana</p></TableCell>
             <TableCell align="right"><p class="derecho">1,500 m²</p> </TableCell>
             <TableCell align="right"><p class="derecho">
@@ -833,6 +926,7 @@ export default function App() {
                 &#42; 100M de largo<br/><br/>
                </p> </TableCell>
             <TableCell align="right"><p class="centrado"> $350,000</p></TableCell>
+            <TableCell align="right"><p class="centrado"> En Venta </p></TableCell>
             <TableCell align="right"><p class="centrado">Precio negociable </p></TableCell>
             <TableCell align="right"><p class="centrado">Rodrigo Hernandez 7012-3456</p></TableCell>
             <TableCell align="right"><p class="centrado">
@@ -869,12 +963,14 @@ export default function App() {
            
             <TableRow>
              <TableCell > 11</TableCell>
+             <TableCell ></TableCell>
             <TableCell align="right"><p class="centrado"> Playa Garita Palmera</p></TableCell>
             <TableCell align="right"><p class="derecho">2,320 m²</p> </TableCell>
             <TableCell align="right"><p class="derecho">
                 --
                </p> </TableCell>
             <TableCell align="right"><p class="centrado"> $275,000</p></TableCell>
+            <TableCell align="right"><p class="centrado"> En Venta </p></TableCell>
             <TableCell align="right"><p class="centrado">Precio negociable </p></TableCell>
             <TableCell align="right"><p class="centrado">Jose Alberto Trujillo 7012-6979</p></TableCell>
             <TableCell align="right"><p class="centrado">
@@ -912,6 +1008,8 @@ A 35 MINUTOS DEL PUERTO DE ACAJUTLA
 
            <TableRow>
              <TableCell > 12</TableCell>
+             <TableCell ><iframe width="150" height="150" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=13.161852911025099%2C%20-87.95953012533566&zoom=10&maptype=roadmap"></iframe>
+             </TableCell>
             <TableCell align="right"><p class="centrado"> Playa Torola</p></TableCell>
             <TableCell align="right"><p class="derecho">3,085 m²</p> </TableCell>
             <TableCell align="right"><p class="derecho">
@@ -919,6 +1017,7 @@ A 35 MINUTOS DEL PUERTO DE ACAJUTLA
                  &#42; 105M de largo<br/><br/>
                </p> </TableCell>
             <TableCell align="right"><p class="centrado"> $460,000</p></TableCell>
+             <TableCell align="right"><p class="centrado"> En Venta </p></TableCell>
             <TableCell align="right"><p class="centrado">-- </p></TableCell>
             <TableCell align="right"><p class="centrado">ARIEL H BENITEZ 7847-4085</p></TableCell>
             <TableCell align="right"><p class="centrado">
@@ -942,6 +1041,88 @@ A 35 MINUTOS DEL PUERTO DE ACAJUTLA
                                         <TableCell align="right"> <Image preview  src={p125} alt="p125" width="75" height="75"/></TableCell>
                                         <TableCell align="right"> <Image preview  src={p126} alt="p126" width="75" height="75"/></TableCell>
                                         </TableRow>
+
+
+                                       
+
+                                     </TableBody>
+                                      </Table>
+              
+               </p></TableCell>
+          </TableRow>
+       
+       <TableRow>
+             <TableCell > 13</TableCell>
+             <TableCell ></TableCell>
+            <TableCell align="right"><p class="centrado"> Playa Ocean breeze</p></TableCell>
+            <TableCell align="right"><p class="derecho">2,340  m²</p> </TableCell>
+            <TableCell align="right"><p class="derecho">
+                 &#42; 26M de frente<br/><br/>
+                 &#42; 90M de largo<br/><br/>
+               </p> </TableCell>
+            <TableCell align="right"><p class="centrado"> $450,000</p></TableCell>
+            <TableCell align="right"><p class="centrado"> En Venta </p></TableCell>
+            <TableCell align="right"><p class="centrado">-- </p></TableCell>
+            <TableCell align="right"><p class="centrado">Jose Alberto Trujillo 7012-3456</p></TableCell>
+            <TableCell align="right"><p class="centrado">
+             TERRENO FRENTE AL MAR CERCA DEL PROYECTO OCEAN BREEZE,A 50 MINUTOS DEL PUERTO DE LA LIBERTAD (SUNSET PARK)
+           </p></TableCell>
+            <TableCell align="right"> <p class="centrado">
+                                    <Table aria-label="simple table">
+                                      <TableBody>
+                                        
+                                        <TableRow>
+                                        <TableCell align="right"> <Image preview  src={p131} alt="p131" width="75" height="75"/></TableCell>
+                                        <TableCell align="right"> <Image preview  src={p132} alt="p132" width="75" height="75"/></TableCell>
+                                        </TableRow>
+
+                                        <TableRow>
+                                        <TableCell align="right"> <Image preview  src={p133} alt="p133" width="75" height="75"/></TableCell>
+                                        <TableCell align="right"> <Image preview  src={p134} alt="p134" width="75" height="75"/></TableCell>
+                                         </TableRow>
+
+
+                                       
+
+                                     </TableBody>
+                                      </Table>
+              
+               </p></TableCell>
+          </TableRow>
+
+            <TableRow>
+             <TableCell > 14</TableCell>
+             <TableCell ><iframe width="150" height="150" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=13.167013381737416%2C%20-88.03009109802188&zoom=10&maptype=roadmap"></iframe>
+             </TableCell>
+            <TableCell align="right"><p class="centrado"> Playa Icacal</p></TableCell>
+            <TableCell align="right"><p class="derecho">1859  m²</p> </TableCell>
+            <TableCell align="right"><p class="derecho">
+                 &#42; 26M de frente<br/><br/>
+                 &#42; 90M de largo<br/><br/>
+               </p> </TableCell>
+            <TableCell align="right"><p class="centrado"> $336,666</p></TableCell>
+            <TableCell align="right"><p class="centrado"> Vendida </p></TableCell>
+            <TableCell align="right"><p class="centrado">-- </p></TableCell>
+            <TableCell align="right"><p class="centrado">Vendedora Flores Past, me comento por el messager que ya esta vendido</p></TableCell>
+            <TableCell align="right"><p class="centrado">
+             Refugio natural de tortugas marinas: Golfina, Carey y Baule
+            •	🐦 Avistamiento de aves migratorias y residentes
+            •	🌳 Más de 9 km de manglares y senderos naturales
+            •	🌊 Ideal para natación, paddleboard, pesca, kayak, caminatas y camping
+           </p></TableCell>
+            <TableCell align="right"> <p class="centrado">
+                                    <Table aria-label="simple table">
+                                      <TableBody>
+                                        
+                                        <TableRow>
+                                        <TableCell align="right"> <Image preview  src={p141} alt="p131" width="75" height="75"/></TableCell>
+                                        <TableCell align="right"> <Image preview  src={p142} alt="p132" width="75" height="75"/></TableCell>
+                                        </TableRow>
+
+                                        <TableRow>
+                                        <TableCell align="right"> <Image preview  src={p143} alt="p133" width="75" height="75"/></TableCell>
+                                        <TableCell align="right"> <Image preview  src={p144} alt="p134" width="75" height="75"/></TableCell>
+                                         </TableRow>
 
 
                                        
