@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/view_terreno/static/css/main.5bf5cf94.css",
-    "main.js": "/view_terreno/static/js/main.1fa801aa.js",
+    "main.css": "/view_terreno/static/css/main.c7edfb6e.css",
+    "main.js": "/view_terreno/static/js/main.2bfa54c7.js",
     "static/js/453.67fe3f6d.chunk.js": "/view_terreno/static/js/453.67fe3f6d.chunk.js",
     "static/media/tamarindo01.jpg": "/view_terreno/static/media/tamarindo01.df4fef29f268a94dfeed.jpg",
     "static/media/shalpa04.jpg": "/view_terreno/static/media/shalpa04.940b5471a5aa8a47b1ad.jpg",
@@ -67,6 +67,7 @@
     "static/media/espino03.jpg": "/view_terreno/static/media/espino03.416be4d67081d577b7d7.jpg",
     "static/media/p111.jpg": "/view_terreno/static/media/p111.dd315c25ec37ff09700d.jpg",
     "static/media/p65.jpg": "/view_terreno/static/media/p65.0af7dcdee4dc9a66203a.jpg",
+    "static/media/mapEspino.jpg": "/view_terreno/static/media/mapEspino.b4642b06e9dbad15ce8f.jpg",
     "static/media/puntamango02.jpg": "/view_terreno/static/media/puntamango02.8ee00a620883afb3ba8a.jpg",
     "static/media/p131.jpg": "/view_terreno/static/media/p131.b19a95ee2a2626c56d25.jpg",
     "static/media/p85.jpg": "/view_terreno/static/media/p85.bf3788e7d421a28574c0.jpg",
@@ -76,6 +77,8 @@
     "static/media/p13.jpg": "/view_terreno/static/media/p13.e8c0ce1d1a421f4ce756.jpg",
     "static/media/p44.jpg": "/view_terreno/static/media/p44.762d82c2f5285dbaa4a0.jpg",
     "static/media/p42.jpg": "/view_terreno/static/media/p42.b2224f56d954d6aea6ca.jpg",
+    "static/media/p144.jpg": "/view_terreno/static/media/p144.8f4d58f07e4331fc12ba.jpg",
+    "static/media/p141.jpg": "/view_terreno/static/media/p141.9a655ba6df61712f59ff.jpg",
     "static/media/p63.jpg": "/view_terreno/static/media/p63.faa9fa6d363ce487e245.jpg",
     "static/media/p62.jpg": "/view_terreno/static/media/p62.1562e8a9bd046e580002.jpg",
     "static/media/p74.jpg": "/view_terreno/static/media/p74.0621c7ebec73aabc78a5.jpg",
@@ -87,6 +90,8 @@
     "static/media/p12.jpg": "/view_terreno/static/media/p12.11478bb191f842ce21a2.jpg",
     "static/media/p11.jpg": "/view_terreno/static/media/p11.ece15feebeef3168903f.jpg",
     "static/media/icacal02.jpg": "/view_terreno/static/media/icacal02.aff8fa4fa38d91d04d4b.jpg",
+    "static/media/p142.jpg": "/view_terreno/static/media/p142.c33d163ce56ad6efd4d9.jpg",
+    "static/media/p143.jpg": "/view_terreno/static/media/p143.70c8e20bae0bb519f1b3.jpg",
     "static/media/tamarindo04.jpg": "/view_terreno/static/media/tamarindo04.f29872728525e6564a2a.jpg",
     "static/media/espino02.jpg": "/view_terreno/static/media/espino02.647619218503e975b2b8.jpg",
     "static/media/p41.jpg": "/view_terreno/static/media/p41.141e729f390512244b2d.jpg",
@@ -97,12 +102,12 @@
     "static/media/ventana01.jpeg": "/view_terreno/static/media/ventana01.8f7adf0fccf3cdb408bc.jpeg",
     "static/media/react.svg": "/view_terreno/static/media/react.6d4dd5dfc6163bdfcfe520bd6bef1a6a.svg",
     "index.html": "/view_terreno/index.html",
-    "main.5bf5cf94.css.map": "/view_terreno/static/css/main.5bf5cf94.css.map",
-    "main.1fa801aa.js.map": "/view_terreno/static/js/main.1fa801aa.js.map",
+    "main.c7edfb6e.css.map": "/view_terreno/static/css/main.c7edfb6e.css.map",
+    "main.2bfa54c7.js.map": "/view_terreno/static/js/main.2bfa54c7.js.map",
     "453.67fe3f6d.chunk.js.map": "/view_terreno/static/js/453.67fe3f6d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5bf5cf94.css",
-    "static/js/main.1fa801aa.js"
+    "static/css/main.c7edfb6e.css",
+    "static/js/main.2bfa54c7.js"
   ]
 }
