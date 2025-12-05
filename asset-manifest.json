@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/view_terreno/static/css/main.c7edfb6e.css",
-    "main.js": "/view_terreno/static/js/main.46f4ac23.js",
+    "main.js": "/view_terreno/static/js/main.20c66565.js",
     "static/js/453.67fe3f6d.chunk.js": "/view_terreno/static/js/453.67fe3f6d.chunk.js",
     "static/media/tamarindo01.jpg": "/view_terreno/static/media/tamarindo01.df4fef29f268a94dfeed.jpg",
     "static/media/shalpa04.jpg": "/view_terreno/static/media/shalpa04.940b5471a5aa8a47b1ad.jpg",
@@ -96,6 +96,7 @@
     "static/media/espino02.jpg": "/view_terreno/static/media/espino02.647619218503e975b2b8.jpg",
     "static/media/p41.jpg": "/view_terreno/static/media/p41.141e729f390512244b2d.jpg",
     "static/media/bahiadorada02.jpg": "/view_terreno/static/media/bahiadorada02.462f7bbc77e0f09340fb.jpg",
+    "static/media/mapCarretera.jpg": "/view_terreno/static/media/mapCarretera.4fefc139c50ce6bc73d4.jpg",
     "static/media/p04.jpg": "/view_terreno/static/media/p04.856a9877b9eb4edc30f7.jpg",
     "static/media/espino04.jpg": "/view_terreno/static/media/espino04.0185f69c79b69819fb9d.jpg",
     "static/media/tamarindo02.jpg": "/view_terreno/static/media/tamarindo02.d42ed153b4d1c2781181.jpg",
@@ -103,11 +104,11 @@
     "static/media/react.svg": "/view_terreno/static/media/react.6d4dd5dfc6163bdfcfe520bd6bef1a6a.svg",
     "index.html": "/view_terreno/index.html",
     "main.c7edfb6e.css.map": "/view_terreno/static/css/main.c7edfb6e.css.map",
-    "main.46f4ac23.js.map": "/view_terreno/static/js/main.46f4ac23.js.map",
+    "main.20c66565.js.map": "/view_terreno/static/js/main.20c66565.js.map",
     "453.67fe3f6d.chunk.js.map": "/view_terreno/static/js/453.67fe3f6d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7edfb6e.css",
-    "static/js/main.46f4ac23.js"
+    "static/js/main.20c66565.js"
   ]
 }
