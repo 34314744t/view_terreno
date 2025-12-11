@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/view_terreno/static/css/main.68aaf3ee.css",
-    "main.js": "/view_terreno/static/js/main.e4e8533e.js",
+    "main.js": "/view_terreno/static/js/main.f6e5155a.js",
     "static/js/453.67fe3f6d.chunk.js": "/view_terreno/static/js/453.67fe3f6d.chunk.js",
     "static/media/tamarindo01.jpg": "/view_terreno/static/media/tamarindo01.df4fef29f268a94dfeed.jpg",
     "static/media/shalpa04.jpg": "/view_terreno/static/media/shalpa04.940b5471a5aa8a47b1ad.jpg",
@@ -107,6 +107,7 @@
     "static/media/maculis08.jpg": "/view_terreno/static/media/maculis08.bb625f5b92a92baaa091.jpg",
     "static/media/toro03.jpg": "/view_terreno/static/media/toro03.561e80734467e9beb262.jpg",
     "static/media/p01.jpg": "/view_terreno/static/media/p01.46204f8e6d7e8bb36e39.jpg",
+    "static/media/p1817.jpg": "/view_terreno/static/media/p1817.9607e4c3ec60fbe85adf.jpg",
     "static/media/icacal13.jpg": "/view_terreno/static/media/icacal13.816cad527b3b6b717d4f.jpg",
     "static/media/p116.jpg": "/view_terreno/static/media/p116.f5d314dece873588fba8.jpg",
     "static/media/icacal07.jpg": "/view_terreno/static/media/icacal07.23c2db437190785e2121.jpg",
@@ -237,11 +238,11 @@
     "static/media/react.svg": "/view_terreno/static/media/react.6d4dd5dfc6163bdfcfe520bd6bef1a6a.svg",
     "index.html": "/view_terreno/index.html",
     "main.68aaf3ee.css.map": "/view_terreno/static/css/main.68aaf3ee.css.map",
-    "main.e4e8533e.js.map": "/view_terreno/static/js/main.e4e8533e.js.map",
+    "main.f6e5155a.js.map": "/view_terreno/static/js/main.f6e5155a.js.map",
     "453.67fe3f6d.chunk.js.map": "/view_terreno/static/js/453.67fe3f6d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.68aaf3ee.css",
-    "static/js/main.e4e8533e.js"
+    "static/js/main.f6e5155a.js"
   ]
 }
