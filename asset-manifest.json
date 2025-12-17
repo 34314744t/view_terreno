@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/view_terreno/static/css/main.68aaf3ee.css",
-    "main.js": "/view_terreno/static/js/main.d4332d3f.js",
+    "main.js": "/view_terreno/static/js/main.f96faabf.js",
     "static/js/453.67fe3f6d.chunk.js": "/view_terreno/static/js/453.67fe3f6d.chunk.js",
     "static/media/tamarindo01.jpg": "/view_terreno/static/media/tamarindo01.df4fef29f268a94dfeed.jpg",
     "static/media/shalpa04.jpg": "/view_terreno/static/media/shalpa04.940b5471a5aa8a47b1ad.jpg",
@@ -271,11 +271,11 @@
     "static/media/react.svg": "/view_terreno/static/media/react.6d4dd5dfc6163bdfcfe520bd6bef1a6a.svg",
     "index.html": "/view_terreno/index.html",
     "main.68aaf3ee.css.map": "/view_terreno/static/css/main.68aaf3ee.css.map",
-    "main.d4332d3f.js.map": "/view_terreno/static/js/main.d4332d3f.js.map",
+    "main.f96faabf.js.map": "/view_terreno/static/js/main.f96faabf.js.map",
     "453.67fe3f6d.chunk.js.map": "/view_terreno/static/js/453.67fe3f6d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.68aaf3ee.css",
-    "static/js/main.d4332d3f.js"
+    "static/js/main.f96faabf.js"
   ]
 }
